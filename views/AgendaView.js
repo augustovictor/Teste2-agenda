@@ -37,11 +37,11 @@ var AgendaView = Backbone.View.extend({
 
 		var formData = {};
 
-		$("#addContact").children('input').each(function (i, el) {
-			if ($(el).val() !== "") {
+		$("#addContact div").children('input').each(function (i, el) {
 				formData[el.id] = $(el).val();
-			}
+				console.log(el);
 		});
+
 
 		contacts.push(formData);
 
